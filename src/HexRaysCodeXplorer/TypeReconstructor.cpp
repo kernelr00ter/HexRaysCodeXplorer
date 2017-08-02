@@ -391,7 +391,7 @@ bool idaapi type_builder_t::check_ptr(cexpr_t *e, struct_filed &str_fld)
 		if (str_fld.vftbl != BADADDR) {
 			char tmp[1024];
 			memset(tmp, 0x00, sizeof(tmp));
-			sprintf_s(tmp, sizeof(tmp), "vftbl reference detected at offset 0x%X, ea=0x%08X\r\n", str_fld.offset, str_fld.vftbl);
+			sprintf_s(tmp, sizeof(tmp), "vftbl reference detected at offset 0x%X, ea=0x%08llX\r\n", str_fld.offset, str_fld.vftbl);
 
 			logmsg(DEBUG, tmp);
 		}
